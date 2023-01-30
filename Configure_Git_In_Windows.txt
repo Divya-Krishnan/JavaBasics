@@ -1,0 +1,4 @@
+To Create Local git repository in windows:
+
+1. To Create a Folder as Local repository
+    git init test_folder
