@@ -2,3 +2,156 @@ To Create Local git repository in windows:
 
 1. To Create a Folder as Local repository
     git init test_folder
+
+
+
+dkris@DESKTOP-AH698RA MINGW64 ~
+$ pwd
+/c/Users/dkris
+
+
+dkris@DESKTOP-AH698RA MINGW64 ~
+$ mkdir git_test
+
+dkris@DESKTOP-AH698RA MINGW64 ~
+$ cd git_test/
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test
+$ git init test1
+Initialized empty Git repository in C:/Users/dkris/git_test/test1/.git/
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test
+$ ls
+test1/
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test
+$ cd test1/
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test/test1 (master)
+$ ls
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test/test1 (master)
+$ cd ..
+
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test
+$ cd test1/
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test/test1 (master)
+$ ls
+Configure_Git_In_Windows.txt
+
+
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test/test1 (master)
+$  git config --global user.email "dkrishnan384@gmail.com"
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test/test1 (master)
+$ git config --global user.name "Divya-Krishnan"
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test/test1 (master)
+$ git commit -m "FileToConfigureGitInWindows"
+[master (root-commit) 4295963] FileToConfigureGitInWindows
+ 1 file changed, 4 insertions(+)
+ create mode 100644 Configure_Git_In_Windows.txt
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test/test1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+
+
+
+
+
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test/test1 (master)
+$ git remote -v
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test/test1 (master)
+$ git push -u origin
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test/test1 (master)
+$ git remote add origin https://github.com/Divya-Krishnan/JavaBasics
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test/test1 (master)
+$ git branch
+* master
+
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test/test1 (master)
+$ git push -f --set-upstream origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 339 bytes | 339.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/Divya-Krishnan/JavaBasics/pull/new/master
+remote:
+To https://github.com/Divya-Krishnan/JavaBasics
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test/test1 (master)
+$ git push -u origin
+Everything up-to-date
+branch 'master' set up to track 'origin/master'.
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test/test1 (master)
+$ cat emptyfile
+cat: emptyfile: No such file or directory
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test/test1 (master)
+$ touch emptyfile
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test/test1 (master)
+$ echo -n "this is an empty file">emptyfile
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test/test1 (master)
+$ cat emptyfile
+this is an empty file
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test/test1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        emptyfile
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test/test1 (master)
+$ git add emptyfile
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test/test1 (master)
+$ git commit -m "this is empty file"
+[master 2861d5a] this is empty file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 emptyfile
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test/test1 (master)
+$ git push origin
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 327 bytes | 327.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Divya-Krishnan/JavaBasics
+   4295963..2861d5a  master -> master
+
+dkris@DESKTOP-AH698RA MINGW64 ~/git_test/test1 (master)
